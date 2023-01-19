@@ -1,3 +1,5 @@
+MAX_LINES = 3
+
 
 def deposit():
   while True:
@@ -14,9 +16,9 @@ def deposit():
   return amount
 
 def  get_number_of_lines():
-  
+
 
 def main():
   balance = deposit()
-
+  
 main()
