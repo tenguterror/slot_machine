@@ -1,6 +1,6 @@
 {
   "python.languageServer": "Pylance",
-  "python.linting.pylintEnabled": true,
+  "python.linting.pylintEnabled": false,
   "python.analysis.diagnosticSeverityOverrides": {
     "reportMissingModuleSource": "none"
   },
