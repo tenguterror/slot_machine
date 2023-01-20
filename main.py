@@ -12,7 +12,28 @@ symbol_count = {
   'B': 4,
   'C': 6,
   'D': 8,
-}def
+}
+
+def get_slot_machine_spin(rows, cols, symbols):
+  all_symbols = []
+  for symbol, symbol_count in symbols.items():
+    for _ in range(symbol_count):
+      all_symbols.append(symbol)
+
+  columns = []
+  for _ in range(cols):
+    column = []
+    current_symbols = all_symbols[:]   # copys a list with [:]
+    for _ in range(rows):
+      value = random.choice(current_symbols)
+      current_symbols.remove(value)
+      column.append(value)
+
+    columns.append(column)
+
+  return columns
+
+
 
 def deposit():
   while True:
@@ -33,7 +54,7 @@ def  get_number_of_lines():
     lines = input(f'Enter the number of lines to bet on (1-{MAX_LINES})? ')
     if lines.isdigit():
       lines = int(lines)
-      if 1 <= lines <= MAX_LINES:    # Checks to see if nu10mber is in between two numbers
+      if 1 <= lines <= MAX_LINES:    # Checks to see if number is in between two numbers
         break
       else:
         print('Enter a valid number of lines.')
